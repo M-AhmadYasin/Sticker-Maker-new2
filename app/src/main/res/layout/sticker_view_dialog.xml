@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    tools:context="com.pro.stickermaker.ui.dialog.StickerDialog">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialog_close_button"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B0BEC5"
+        app:icon="@drawable/close_icon"
+        app:iconTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/MyIconButtonShapeOverlay" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/dialog_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/page2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/right_guide"
+        app:layout_constraintStart_toStartOf="@id/left_guide"
+        app:layout_constraintTop_toBottomOf="@id/dialog_close_button" />
+
+    <!--    -->
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:padding="0dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_image_view"
+        app:selectionRequired="false"
+        app:singleSelection="false">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_delete_button"
+            style="@style/Widget.Material3.Button.TonalButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B0BEC5"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/action_delete"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            app:icon="@drawable/delete_icon"
+            app:iconGravity="textTop"
+            app:iconPadding="@dimen/_6sdp"
+            app:iconTint="#000000"
+            app:shapeAppearanceOverlay="@style/MyIconButtonShapeOverlay" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_edit_button"
+            style="@style/Widget.Material3.Button.TonalButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B0BEC5"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/action_delete"
+            android:textColor="#000000"
+            app:icon="@drawable/edit_icon"
+            app:iconGravity="textTop"
+            app:iconPadding="@dimen/_6sdp"
+            app:iconTint="#000000"
+            app:shapeAppearanceOverlay="@style/MyIconButtonShapeOverlay" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_add_button"
+            style="@style/Widget.Material3.Button.TonalButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B0BEC5"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/add"
+            android:textColor="#000000"
+            app:icon="@drawable/add_new_icon"
+            app:iconGravity="textTop"
+            app:iconPadding="@dimen/_6sdp"
+            app:iconTint="#000000"
+            app:shapeAppearanceOverlay="@style/MyIconButtonShapeOverlay" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

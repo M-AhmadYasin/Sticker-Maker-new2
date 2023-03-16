@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.pro.stickermaker.ui.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_StickerPackFragment"
+            app:destination="@id/StickerPackFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_HomeFragment_to_selectStickerFragment"
+            app:destination="@id/selectStickerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/StickerPackFragment"
+        android:name="com.pro.stickermaker.ui.StickerPackFragment"
+        android:label="@string/sticker_pack"
+        tools:layout="@layout/fragment_sticker_pack">
+
+        <action
+            android:id="@+id/action_StickerPackFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectStickerFragment"
+        android:name="com.pro.stickermaker.ui.SelectStickerFragment"
+        android:label="@string/select_stickers"
+        tools:layout="@layout/fragment_select_stickers" />
+</navigation>

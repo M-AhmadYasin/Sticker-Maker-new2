@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_12sdp"
+    tools:context=".ui.SelectStickerFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:foreground="@drawable/ripple_foreground"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_placeHolder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="#20000000"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_placeholder"
+            app:shapeAppearanceOverlay="@style/Widget.MaterialComponents.ShapeableImageView.Style" />
+
+        <TextView
+            android:id="@+id/text_placeholder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:ellipsize="marquee"
+            android:gravity="start|center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:singleLine="true"
+            android:text="@string/import_from_gallery"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="@dimen/_16sdp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/arrow_placeHolder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:foreground="@drawable/ripple_foreground"
+            android:scaleType="center"
+            android:src="@drawable/arrow_placeholder" />
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="horizontal"
+        app:dividerColor="#33000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_Layout" />
+
+    <TextView
+        android:id="@+id/Stickers_Spannable_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:ellipsize="marquee"
+        android:gravity="start|center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="Stickers (606)"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_Layout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Stickers_Spannable_placeholder"
+        app:layout_constraintVertical_bias="0.0"
+        app:spanCount="4"
+        tools:listitem="@layout/item_sticker_image_view" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:backgroundTint="#B0BEC5"
+        android:text="@string/multiple"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:iconTint="#000000"
+        app:icon="@drawable/select_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/MyIconButtonShapeOverlay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

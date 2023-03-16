@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StickerMaker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:statusBarColor">#075B52</item>
+        <item name="boxBackgroundColor">#0F000000</item>
+        <item name="theme_color">#000000</item>
+        <item name="main_text_color">#000000</item>
+        <item name="light_text_color">#66000000</item>
+        <item name="appBarLayoutStyle">@style/Widget.Material3.AppBarLayout.Style</item>
+        <item name="toolbarStyle">@style/Widget.App.Toolbar.Light</item>
+
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+    </style>
+
+    <style name="Theme.StickerMaker" parent="Base.Theme.StickerMaker" />
+    <!--appbar-->
+    <style name="Widget.Material3.AppBarLayout.Style" parent="Widget.Material3.AppBarLayout">
+        <item name="android:background">#075B52</item>
+    </style>
+
+    <!--    toolbar-->
+    <style name="Widget.App.Toolbar.Light" parent="Widget.Material3.Toolbar">
+        <item name="titleTextColor">#ffffff</item>
+        <item name="colorOnPrimary">#ffffff</item>
+
+    </style>
+    <!--    round edges for button and edit text layout-->
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">45dp</item>
+    </style>
+
+    <!--    shape-able imageview style for rounded edges-->
+    <style name="Widget.MaterialComponents.ShapeableImageView.Style" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+
+    <!--    Dialog Box-->
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorSecondary">#ffffff</item>
+        <!--        <item name="colorSurface">#ffffff</item>-->
+        <item name="colorOnSurface">#ffffff</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.App.Title.Text
+        </item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button.PositiveButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+
+    </style>
+
+
+    <!--    icon button style-->
+    <style name="MyIconButtonShapeOverlay" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+</resources>
+

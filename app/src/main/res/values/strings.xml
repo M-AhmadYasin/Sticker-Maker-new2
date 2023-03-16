@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Sticker Maker</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="search_for_stickers">Search for stickers</string>
+    <string name="create_sticker_pack">Create Sticker Pack</string>
+    <string name="add_sticker_pack_to_whatsapp">Add Sticker Pack to Whatsapp</string>
+    <string name="import_from_gallery">Import from Gallery</string>
+    <string name="help">Help</string>
+    <string name="select_stickers">Select Sticker</string>
+    <string name="sticker_pack">Sticker Pack</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+    <string name="add_pack_fail_prompt_update_whatsapp">Sticker pack not added. If you\'d like to add it, make sure you update to the latest version of WhatsApp.</string>
+    <string name="add_to_whatsapp">Add to WhatsApp</string>
+    <string name="title_validation_error">Error with the pack</string>
+    <string name="add_pack_fail_prompt_update_play_link">Update</string>
+    <string name="cannot_find_play_store">Google Play is not installed on the device.</string>
+    <string name="add">Add</string>
+    <string name="multiple">Multiple</string>
+</resources>

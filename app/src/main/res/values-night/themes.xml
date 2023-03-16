@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StickerMaker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:statusBarColor">#075B52</item>
+        <item name="boxBackgroundColor">#1Affffff</item>
+        <item name="theme_color">#ffffff</item>
+        <item name="main_text_color">#ffffff</item>
+        <item name="light_text_color">#66ffffff</item>
+        <item name="appBarLayoutStyle">@style/Widget.Material3.AppBarLayout.Style</item>
+        <item name="toolbarStyle">@style/Widget.App.Toolbar.Light</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+
+
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorSecondary">#ffffff</item>
+        <!--        <item name="colorSurface">#ffffff</item>-->
+        <item name="colorOnSurface">#ffffff</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.App.Title.Text
+        </item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button.PositiveButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+</resources>
